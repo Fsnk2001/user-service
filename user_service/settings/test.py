@@ -24,14 +24,3 @@ DATABASES = {
 PASSWORD_HASHERS = ['django.contrib.auth.hashers.MD5PasswordHasher']
 
 # endregion --------------------------------------------------------------------
-
-# region CACHES ----------------------------------------------------------------
-
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'LOCATION': '',
-    },
-}
-
-# endregion --------------------------------------------------------------------

@@ -4,19 +4,6 @@ from .base import *
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
-
-# endregion --------------------------------------------------------------------
-
-# region CACHES ----------------------------------------------------------------
-
-CACHES = {
-    'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'LOCATION': '',
-    },
-}
-
 # endregion --------------------------------------------------------------------
 
 # region DJANGO-DEBUG-TOOLBAR ----------------------------------------------------------------
