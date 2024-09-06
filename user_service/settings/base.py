@@ -69,8 +69,6 @@ THIRD_PARTY_APPS = [
     'rest_framework',
     'corsheaders',
     'drf_spectacular',
-    'django_celery_results',
-    'django_celery_beat',
     'rest_framework_simplejwt',
 ]
 
@@ -105,8 +103,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': env('POSTGRES_NAME', default='postgres'),
-        'HOST': env('POSTGRES_DB_HOST', default='localhost'),
-        'PORT': env('POSTGRES_DB_PORT', default=5432),
+        'HOST': env('POSTGRES_HOST', default='localhost'),
+        'PORT': env('POSTGRES_PORT', default=5432),
         'USER': env('POSTGRES_USER', default='postgres'),
         'PASSWORD': env('POSTGRES_PASSWORD', default='postgres'),
     }
@@ -205,19 +203,6 @@ SPECTACULAR_SETTINGS = {
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_ALL_ORIGINS = True
-
-# endregion --------------------------------------------------------------------
-
-# region CACHES ----------------------------------------------------------------
-
-CACHES = {
-    'default': {
-        'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': env('REDIS_LOCATION', default='redis://localhost:6379'),
-    }
-}
-
-CACHE_TTL = 60 * 15  # Cache time to live is 15 minutes.
 
 # endregion --------------------------------------------------------------------
 
